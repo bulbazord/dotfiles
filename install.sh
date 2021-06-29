@@ -11,7 +11,7 @@ ln -svf $DOTFILES_DIR/inputrc ~/.inputrc
 ln -svf $DOTFILES_DIR/zshrc ~/.zshrc
 
 # tmux/
-ln -svf $DOTFILES_DIR/tmux/tmux.conf ~/.tmux.conf
+ln -svf $DOTFILES_DIR/tmux.conf ~/.tmux.conf
 
 # vim/
 if [[ ! -d ~/.vim ]]; then
