@@ -14,6 +14,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'rust-lang/rust.vim'
 
 Bundle 'sonph/onehalf', {'rtp': 'vim/'}
 
@@ -52,9 +53,10 @@ vnoremap <Leader>y "*y
 nnoremap <Leader>P "*P
 vnoremap <Leader>p "*p
 
-" Clang formatting
+" Formatting
 autocmd Filetype c,cpp,objc nnoremap <buffer><Leader>f :ClangFormat<cr>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>f :ClangFormat<CR>
+autocmd Filetype rust nnoremap <buffer><Leader>f :RustFmt<cr>
 
 " Search settings
 set incsearch
