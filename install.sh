@@ -17,5 +17,4 @@ ln -svf $DOTFILES_DIR/tmux.conf ~/.tmux.conf
 if [[ ! -d ~/.vim ]]; then
     mkdir ~/.vim
 fi
-ln -svf $DOTFILES_DIR/vim/vimrc ~/.vimrc
-ln -svfn $DOTFILES_DIR/vim/colors ~/.vim/
+ln -svf $DOTFILES_DIR/vimrc ~/.vimrc
