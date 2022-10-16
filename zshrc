@@ -18,3 +18,6 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
   # Colorized output for `ls`
   export CLICOLOR=1
 fi
+
+alias ide="tmux split-window -c \"#{pane_current_path}\" -v -p 25"
+alias vim="nvim"
