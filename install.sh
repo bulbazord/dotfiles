@@ -24,3 +24,9 @@ if [[ ! -d ~/.config/nvim ]]; then
   mkdir -p ~/.config/nvim
 fi
 ln -svf $DOTFILES_DIR/init.vim ~/.config/nvim/init.vim
+
+# alacritty
+if [[ ! -d ~/.config/alacritty ]]; then
+  mkdir -p ~/.config/alacritty
+fi
+ln -svf $DOTFILES_DIR/alacritty.toml ~/.config/alacritty/alacritty.toml
