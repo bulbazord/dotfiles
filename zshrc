@@ -13,7 +13,6 @@ export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 export LANG=en_US.UTF-8
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
-  alias tmux="TERM=screen-256color-bce tmux"
   # Colorized output for `ls`
   export CLICOLOR=1
 fi
