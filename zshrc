@@ -11,7 +11,6 @@ export VISUAL='vim'
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 export LANG=en_US.UTF-8
-export ARCHFLAGS="-arch x86_64"
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
   alias tmux="TERM=screen-256color-bce tmux"
