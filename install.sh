@@ -23,7 +23,8 @@ ln -svf $DOTFILES_DIR/vimrc ~/.vimrc
 if [[ ! -d ~/.config/nvim ]]; then
   mkdir -p ~/.config/nvim
 fi
-ln -svf $DOTFILES_DIR/init.vim ~/.config/nvim/init.vim
+#ln -svf $DOTFILES_DIR/init.vim ~/.config/nvim/init.vim
+ln -svf $DOTFILES_DIR/init.lua ~/.config/nvim/init.lua
 
 # alacritty
 if [[ ! -d ~/.config/alacritty ]]; then
