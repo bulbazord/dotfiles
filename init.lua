@@ -8,6 +8,7 @@ Plug('vim-airline/vim-airline-themes')
 Plug('rhysd/vim-clang-format')
 Plug('rust-lang/rust.vim')
 Plug('sonph/onehalf', {['rtp'] = 'vim/'})
+Plug('cryptomilk/nightcity.nvim')
 vim.call('plug#end')
 
 -- Filetype support
@@ -61,10 +62,17 @@ vim.opt.smartcase = true
 vim.opt.infercase = true
 
 -- Color settings
-vim.cmd.colorscheme("onehalfdark")
-vim.opt.background = 'dark'
-vim.opt.termguicolors = true
+require('nightcity').setup({
+  style = 'kabuki',
+  terminal_colors = true,
+  plugins = { default = false },
+})
+vim.cmd.colorscheme('nightcity')
+
+-- vim.cmd.colorscheme("onehalfdark")
+-- vim.opt.background = 'dark'
+-- vim.opt.termguicolors = true
 
 -- vim-airline settings
 vim.opt.laststatus = 2
-vim.g.airline_theme = 'onehalfdark'
+vim.g.airline_theme = 'tomorrow'
