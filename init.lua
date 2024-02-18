@@ -66,6 +66,22 @@ require('nightcity').setup({
   style = 'kabuki',
   terminal_colors = true,
   plugins = { default = false },
+  invert_colors = {
+    cursor = true,
+    diff = true,
+    error = true,
+    search = true,
+    selection = false,
+    signs = false,
+    statusline = true,
+    tabline = false,
+  },
+  font_style = {
+    comments = { italic = true },
+    keywords = { italic = true },
+    functions = { bold = true },
+    search = { bold = true },
+  },
 })
 vim.cmd.colorscheme('nightcity')
 
