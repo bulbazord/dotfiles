@@ -6,8 +6,8 @@ SAVEHIST=130000
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 export LANG=en_US.UTF-8
