@@ -12,7 +12,7 @@ class FileConfig:
 
 
 FILES = {
-    "alacritty": FileConfig(".config"),
+    "alacritty.toml": FileConfig(".config"),
     "inputrc": FileConfig(""),
     "init.lua": FileConfig(".config/nvim"),
     "tmux.conf": FileConfig(""),
