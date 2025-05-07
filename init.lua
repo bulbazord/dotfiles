@@ -32,19 +32,21 @@ vim.opt.autoindent = true
 vim.opt.textwidth = 80
 vim.opt.linebreak = true
 
+vim.opt.cinoptions = "l1"
+
 local formatting_commands = vim.api.nvim_create_augroup("FormattingCommands", {
   clear = true
 })
 
 vim.api.nvim_create_autocmd("Filetype", {
   group = formatting_commands,
-  pattern = "c,cpp,objc",
+  pattern = "c,cpp,objc,java",
   command = "nnoremap <buffer><Leader>f :ClangFormat<cr>"
 })
 
 vim.api.nvim_create_autocmd("Filetype", {
   group = formatting_commands,
-  pattern = "c,cpp,objc",
+  pattern = "c,cpp,objc,java",
   command = "vnoremap <buffer><Leader>f :ClangFormat<CR>"
 })
 
@@ -92,3 +94,6 @@ vim.cmd.colorscheme('nightcity')
 -- vim-airline settings
 vim.opt.laststatus = 2
 vim.g.airline_theme = 'tomorrow'
+-- Needed for nvim 0.11.
+-- See: https://github.com/vim-airline/vim-airline/issues/2693
+vim.cmd.highlight("statusline cterm=NONE gui=NONE")
