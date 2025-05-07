@@ -1,22 +1,22 @@
 import argparse
 import os
 import sys
-from typing import Tuple
+from typing import Optional, Tuple
 
 from dataclasses import dataclass
 
 
 @dataclass
 class FileConfig:
-    relative_path: str
+    relative_path: Optional[str] = None
 
 
 FILES = {
     "alacritty.toml": FileConfig(".config"),
-    "inputrc": FileConfig(""),
+    "inputrc": FileConfig(),
     "init.lua": FileConfig(".config/nvim"),
-    "tmux.conf": FileConfig(""),
-    "zshrc": FileConfig(""),
+    "tmux.conf": FileConfig(),
+    "zshrc": FileConfig(),
 }
 
 
@@ -27,9 +27,10 @@ def get_dotfiles_dir() -> str:
 def calculate_destination_dir(
     dest_dir: str, file: str, file_config: FileConfig
 ) -> Tuple[str, str]:
-    destination_dir = os.path.join(dest_dir, file_config.relative_path)
+    relative_path_component = file_config.relative_path if file_config.relative_path else ""
+    destination_dir = os.path.join(dest_dir, relative_path_component)
     filename = file
-    if file_config.relative_path == "":
+    if relative_path_component == "":
         filename = "." + filename
 
     return (destination_dir, filename)
