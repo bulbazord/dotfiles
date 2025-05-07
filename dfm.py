@@ -9,10 +9,12 @@ from dataclasses import dataclass
 @dataclass
 class FileConfig:
     relative_path: Optional[str] = None
+    filename_override: Optional[str] = None
 
 
 FILES = {
     "alacritty.toml": FileConfig(".config"),
+    "ghosty-config": FileConfig(".config/ghostty", "config"),
     "inputrc": FileConfig(),
     "init.lua": FileConfig(".config/nvim"),
     "tmux.conf": FileConfig(),
@@ -27,9 +29,11 @@ def get_dotfiles_dir() -> str:
 def calculate_destination_dir(
     dest_dir: str, file: str, file_config: FileConfig
 ) -> Tuple[str, str]:
-    relative_path_component = file_config.relative_path if file_config.relative_path else ""
+    relative_path_component = (
+        file_config.relative_path if file_config.relative_path else ""
+    )
     destination_dir = os.path.join(dest_dir, relative_path_component)
-    filename = file
+    filename = file_config.filename_override if file_config.filename_override else file
     if relative_path_component == "":
         filename = "." + filename
 
