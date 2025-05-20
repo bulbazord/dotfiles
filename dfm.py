@@ -13,7 +13,6 @@ class FileConfig:
 
 
 FILES = {
-    "alacritty.toml": FileConfig(".config"),
     "ghosty-config": FileConfig(".config/ghostty", "config"),
     "inputrc": FileConfig(),
     "init.lua": FileConfig(".config/nvim"),
