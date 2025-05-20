@@ -15,7 +15,7 @@ class FileConfig:
 FILES = {
     "ghosty-config": FileConfig(".config/ghostty", "config"),
     "inputrc": FileConfig(),
-    "init.lua": FileConfig(".config/nvim"),
+    "nvim": FileConfig(".config/"),
     "tmux.conf": FileConfig(),
     "zshrc": FileConfig(),
 }
