@@ -27,9 +27,3 @@ vim.api.nvim_create_autocmd("Filetype", {
 })
 
 vim.cmd.colorscheme('catppuccin')
-
--- vim-airline settings
-vim.g.airline_theme = 'tomorrow'
--- Needed for nvim 0.11.
--- See: https://github.com/vim-airline/vim-airline/issues/2693
-vim.cmd.highlight("statusline cterm=NONE gui=NONE")
