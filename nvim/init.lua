@@ -26,7 +26,7 @@ vim.api.nvim_create_autocmd("Filetype", {
   command = "nnoremap <buffer><Leader>f :RustFmt<cr>"
 })
 
-vim.cmd.colorscheme('nightcity')
+vim.cmd.colorscheme('catppuccin')
 
 -- vim-airline settings
 vim.g.airline_theme = 'tomorrow'
