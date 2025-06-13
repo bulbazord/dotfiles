@@ -30,6 +30,7 @@ return {
 				objc = { "clang-format" },
 				objcpp = { "clang-format" },
 				java = { "clang-format" },
+				python = { "black" },
 			},
 		},
 	},
