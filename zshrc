@@ -17,4 +17,9 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
   export CLICOLOR=1
 fi
 
+if [[ "$(uname -s)" == "Linux" ]]; then
+  export PS1="%n@%m %1~ %# "
+  alias ls="ls --color=auto"
+fi
+
 alias vim="nvim"
